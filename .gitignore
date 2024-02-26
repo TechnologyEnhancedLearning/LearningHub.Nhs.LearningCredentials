@@ -364,3 +364,6 @@ FodyWeavers.xsd
 /LearningHub.Nhs.LearningCredentials.Api/appsettings.Development.json
 /LearningHub.Nhs.LearningCredentials.Api/web.config
 /LearningHub.Nhs.LearningCredentials.Api/internal-nlog-lhapi.txt
+
+/LearningHub.Nhs.UserProfileUI/Terraform/.terraform
+/LearningHub.Nhs.UserprofileUI/Terraform/.terraform.*
