@@ -17,7 +17,7 @@ resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
   resource_group_name = azurerm_resource_group.LearningCredentialsResourceGroup.name
   service_plan_id     = azurerm_service_plan.LearningCredentialsServicePlan.id
   site_config {
-	app_command_line  = "dotnet Learninghub.Nhs.LearningCredentialsApi.exe"
+	app_command_line  = "dotnet Learninghub.Nhs.LearningCredentialsApi.dll"
 	application_stack {
 	  dotnet_version = "6.0"
 	}
