@@ -11,7 +11,7 @@ resource "azurerm_service_plan" "LearningCredentialsServicePlan" {
   os_type			  = "Linux"
 }
 
-resource "azurerm_linux_web_app" "LearningCrednetialsLinuxWebApp" {
+resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
   name                = "learninghub-learningcredentials-app"
   location            = azurerm_resource_group.LearningCredentialsResourceGroup.location
   resource_group_name = azurerm_resource_group.LearningCredentialsResourceGroup.name
