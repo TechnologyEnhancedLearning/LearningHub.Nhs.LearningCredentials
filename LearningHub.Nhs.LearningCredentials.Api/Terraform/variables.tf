@@ -1,4 +1,15 @@
-variable "sql_admin_password" {
-    type      = string
-	sensitive = true
+variable "ResourceGroupName" {
+    type = string
+}
+
+variable "ResourceGroupLocation" {
+    type = string
+}
+
+variable "DatabaseName" {
+    type = string
+}
+
+variable "DatabaseServerId" {
+    type = string
 }

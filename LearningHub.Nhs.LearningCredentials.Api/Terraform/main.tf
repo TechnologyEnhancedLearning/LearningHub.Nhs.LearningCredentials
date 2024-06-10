@@ -1,6 +1,6 @@
 resource "azurerm_resource_group" "LearningCredentialsResourceGroup" {
-    name        = "LearningCredentialsRG"
-    location    = "uksouth"
+    name        = var.ResourceGroupName
+    location    = var.ResourceGroupLocation
 }
 
 resource "azurerm_service_plan" "LearningCredentialsServicePlan" {
@@ -25,7 +25,7 @@ resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
 }
 
 resource "azurerm_mssql_database" "LearningCredentialsMssqlDatabase" {
-  name                = "LearningCredentials"
-  collation           = "SQL_Latin1_General_CP1_CI_AS"
-  server_id           = "/subscriptions/66516f71-f3d4-4911-b900-c6e4690a5b15/resourceGroups/UKS-ELFH-DEVLEARNINGHUBNHSUK-RG/providers/Microsoft.Sql/servers/uks-learninghubnhsuk-dev-dbs"
+  name      = var.DatabaseName
+  collation = "SQL_Latin1_General_CP1_CI_AS"
+  server_id = var.DatabaseServerId
 }
