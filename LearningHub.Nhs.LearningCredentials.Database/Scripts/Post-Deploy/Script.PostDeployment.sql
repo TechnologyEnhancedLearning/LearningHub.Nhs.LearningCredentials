@@ -1,4 +1,5 @@
-﻿/*
+﻿
+/*
 Post-Deployment Script Template							
 --------------------------------------------------------------------------------------
  This file contains SQL statements that will be appended to the build script.		
@@ -11,5 +12,8 @@ Post-Deployment Script Template
 */
 
 ---- Initial lookup data
---:r .\Scripts\ReleaseScripts\Populate_ClientSystems.sql
---:r .\Scripts\ReleaseScripts\Populate_VerifiableCredentials.sql
+:r ..\ReleaseScripts\Populate_ClientSystems.sql
+:r ..\ReleaseScripts\Populate_PeriodUnits.sql
+:r ..\ReleaseScripts\Populate_VerifiableCredentials.sql
+:r ..\ReleaseScripts\Populate_UserVerifiableCredentialStatuses.sql
+

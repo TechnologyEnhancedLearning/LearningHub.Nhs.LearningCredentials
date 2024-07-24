@@ -13,3 +13,7 @@ variable "DatabaseName" {
 variable "DatabaseServerId" {
     type = string
 }
+
+variable "LearningCredentialsAppName" {
+    type = string
+}

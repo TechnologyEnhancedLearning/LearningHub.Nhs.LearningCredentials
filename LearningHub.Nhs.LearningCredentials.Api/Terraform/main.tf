@@ -12,7 +12,7 @@ resource "azurerm_service_plan" "LearningCredentialsServicePlan" {
 }
 
 resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
-  name                = "learninghub-learningcredentials-app"
+  name                = var.LearningCredentialsAppName
   location            = azurerm_resource_group.LearningCredentialsResourceGroup.location
   resource_group_name = azurerm_resource_group.LearningCredentialsResourceGroup.name
   service_plan_id     = azurerm_service_plan.LearningCredentialsServicePlan.id
