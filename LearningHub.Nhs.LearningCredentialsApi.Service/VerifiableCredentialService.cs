@@ -197,7 +197,6 @@ namespace LearningHub.Nhs.LearningCredentialsApi.Service
             var userVerifiableCredentialList = this.userVerifiableCredentialRepository.GetAllForUserAsync(userId);
 
             var elfhAvailableCredentials = await this.elfhActivityRepository.GetClientSystemCredentialsForUserAsync(userId, clientCredentialIdText);
-
             var outputList = new List<UserVerifiableCredentialResponse>();
 
             foreach (var clientCredential in elfhAvailableCredentials)
