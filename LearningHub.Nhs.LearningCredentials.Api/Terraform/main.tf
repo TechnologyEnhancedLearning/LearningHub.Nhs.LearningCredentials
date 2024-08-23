@@ -7,7 +7,7 @@ resource "azurerm_service_plan" "LearningCredentialsServicePlan" {
   name                = "learninghub-learningcredentials-app-service-plan"
   location            = azurerm_resource_group.LearningCredentialsResourceGroup.location
   resource_group_name = azurerm_resource_group.LearningCredentialsResourceGroup.name
-  sku_name			  = "B1"
+  sku_name			  = "B3"
   os_type			  = "Linux"
 }
 
