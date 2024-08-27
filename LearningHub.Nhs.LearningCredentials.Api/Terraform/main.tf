@@ -24,6 +24,11 @@ resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
   }
 }
 
+resource "azurerm_app_service_virtual_network_swift_connection" "LearningCredentialsVnetIntegration" {
+  app_service_id = azurerm_linux_web_app.LearningCredentialsLinuxWebApp.id
+  subnet_id = var.LearningCredentialsSubnetId
+}
+
 resource "azurerm_mssql_database" "LearningCredentialsMssqlDatabase" {
   name      = var.DatabaseName
   collation = "SQL_Latin1_General_CP1_CI_AS"

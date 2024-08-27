@@ -17,3 +17,7 @@ variable "DatabaseServerId" {
 variable "LearningCredentialsAppName" {
     type = string
 }
+
+variable "LearningCredentialsSubnetId" {
+    type = string
+}
