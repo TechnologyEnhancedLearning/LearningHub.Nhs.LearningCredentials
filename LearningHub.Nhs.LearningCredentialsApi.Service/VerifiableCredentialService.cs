@@ -212,6 +212,7 @@ namespace LearningHub.Nhs.LearningCredentialsApi.Service
                     var displayCredential = new UserVerifiableCredentialResponse()
                     {
                         CredentialName = verifiableCredential!.CredentialName,
+                        Level = verifiableCredential.Level,
                         ClientSystemId = verifiableCredential.ClientSystemId,
                         ClientSystemCredentialId = verifiableCredential.ClientSystemCredentialId,
                         UserId = userId,
