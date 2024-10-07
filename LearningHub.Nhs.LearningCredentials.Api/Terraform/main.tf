@@ -7,7 +7,7 @@ resource "azurerm_service_plan" "LearningCredentialsServicePlan" {
   name                = "learninghub-learningcredentials-app-service-plan"
   location            = azurerm_resource_group.LearningCredentialsResourceGroup.location
   resource_group_name = azurerm_resource_group.LearningCredentialsResourceGroup.name
-  sku_name			  = "B1"
+  sku_name			  = "B3"
   os_type			  = "Linux"
 }
 
@@ -22,6 +22,11 @@ resource "azurerm_linux_web_app" "LearningCredentialsLinuxWebApp" {
 	  dotnet_version = "6.0"
 	}
   }
+}
+
+resource "azurerm_app_service_virtual_network_swift_connection" "LearningCredentialsVnetIntegration" {
+  app_service_id = azurerm_linux_web_app.LearningCredentialsLinuxWebApp.id
+  subnet_id = var.LearningCredentialsSubnetId
 }
 
 resource "azurerm_mssql_database" "LearningCredentialsMssqlDatabase" {
